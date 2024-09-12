@@ -14,7 +14,7 @@ var coinChange = function (coins, amount) {
     if (coins[i] <= remainingAmount) {
       let numCoins = Math.floor(remainingAmount / coins[i]);
       count += numCoins;
-      remainingAmount -= numCoins * coins[i];
+      remainingAmount %= coins[i];
     }
   }
 
